@@ -1,47 +1,36 @@
-<script setup>
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
-</script>
+<!-- src/App.vue -->
 
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
+    <div id="app">
+        <!-- 仅在用户已登录时显示 AppHeader -->
+        <AppHeader v-if="isAuthenticated" />
 
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
+        <!-- 渲染当前路由对应的页面 -->
+        <router-view />
     </div>
-  </header>
-
-  <main>
-    <TheWelcome />
-  </main>
 </template>
 
-<style scoped>
-header {
-  line-height: 1.5;
-}
+<script>
+import { mapGetters } from 'vuex';
+import AppHeader from '@/components/AppHeader.vue';
 
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
+export default {
+    name: 'App',
+    components: {
+        AppHeader,
+    },
+    computed: {
+        ...mapGetters('user', ['isAuthenticated']),
+    },
+};
+</script>
 
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
+<style>
+/* 全局样式 */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f2f5;
 }
 </style>

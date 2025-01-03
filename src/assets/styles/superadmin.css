@@ -1,0 +1,13 @@
+/* src/assets/styles/superadmin.css */
+
+.manage-librarians,
+.librarian-info-approval,
+.create-librarian,
+.manage-books {
+    /* 通用样式 */
+}
+
+h2 {
+    color: #333;
+    margin-bottom: 20px;
+}

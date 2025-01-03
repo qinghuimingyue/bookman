@@ -1,0 +1,55 @@
+/* src/assets/styles/admin.css */
+
+.admin-info,
+.borrow-approval,
+.return-approval,
+.manage-books,
+.book-details {
+    padding: 20px;
+    background-color: #fff;
+    min-height: 100vh;
+}
+
+.admin-info h2,
+.borrow-approval h2,
+.return-approval h2,
+.manage-books h2,
+.book-details h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.text.item {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.text.item span {
+    display: inline-block;
+    width: 150px;
+    color: #555;
+}
+
+.status-available {
+    color: green;
+}
+
+.status-borrowed {
+    color: red;
+}
+
+.status-returned {
+    color: green;
+}
+
+.status-not-returned {
+    color: red;
+}
+
+.no-data,
+.no-history,
+.loading {
+    text-align: center;
+    color: #999;
+    padding: 20px 0;
+}

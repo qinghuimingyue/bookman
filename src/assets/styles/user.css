@@ -1,0 +1,75 @@
+/* src/assets/styles/user.css */
+
+.user-info,
+.book-overview,
+.book-detail,
+.borrow-book,
+.return-book,
+.collection-info {
+    padding: 20px;
+    background-color: #fff;
+    min-height: 100vh;
+}
+
+.user-info h2,
+.book-overview h2,
+.book-detail h2,
+.borrow-book h2,
+.return-book h2,
+.collection-info h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.info-card,
+.detail-card {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.book-card {
+    /* Reuse from components */
+}
+
+.text.item {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.text.item span {
+    display: inline-block;
+    width: 150px;
+    color: #555;
+}
+
+.status-available {
+    color: green;
+}
+
+.status-borrowed {
+    color: red;
+}
+
+.status-returned {
+    color: green;
+}
+
+.status-not-returned {
+    color: red;
+}
+
+.no-data,
+.no-history,
+.loading {
+    text-align: center;
+    color: #999;
+    padding: 20px 0;
+}
+
+.actions {
+    margin-top: 20px;
+}
+
+.actions .el-button {
+    margin-right: 10px;
+}
